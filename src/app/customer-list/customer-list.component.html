@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<table class="table table-striped   ">
+ <thead>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>BUISS ITEM</th>
+        <th>BUISS DESC</th>
+        <th>COST</th>
+        <th>Actions</th>
+        
+    </tr>
+ </thead>
+ <tbody>
+     <tr *ngFor = "let customer of customers">
+      <td> {{ customer.id }} </td>
+      <td> {{ customer.name }} </td>
+      <td> {{ customer.email }} </td>
+      <td> {{ customer.buissitem }} </td>
+      <td> {{ customer.buissdesc }} </td>
+      <td> {{ customer.cost }} </td>
+      <td>        
+        <button (click) = "updateCustomer(customer.id)" class="btn btn-info">Update</button>    
+      </td>
+      <td>        
+        <button (click) = "deleteCustomer(customer.id)" class="btn btn-info">Delete</button>    
+      </td>       
+    </tr>
+ </tbody>        
+</table>

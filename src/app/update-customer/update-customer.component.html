@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<div>
+<H4>Update Customer Info</H4>
+<form (ngSubmit) = "onSubmit()" class="container-create">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="number" class="form-control" id="id" 
+        [(ngModel)] = "customer.id" name = "id">        
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name" 
+        [(ngModel)] = "customer.name" name = "name">        
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" id="email" 
+        [(ngModel)] = "customer.email" name = "email">        
+    </div>
+    <div class="form-group">
+        <label>Item</label>
+        <input type="text" class="form-control" id="buissitem" 
+        [(ngModel)] = "customer.buissitem" name = "buissitem">        
+    </div>
+    <div class="form-group">
+        <label>description</label>
+        <input type="text" class="form-control" id="buissdesc" 
+        [(ngModel)] = "customer.buissdesc" name = "buissdesc">        
+    </div>
+    <div class="form-group">
+        <label>Cost</label>
+        <input type="number" class="form-control" id="cost" 
+        [(ngModel)] = "customer.cost" name = "cost">        
+    </div>
+    
+    <button class="btn btn-success" type="submit">Submit</button>    
+</form>
+</div>
