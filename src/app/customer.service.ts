@@ -1,3 +1,4 @@
+import { AccountTransfer } from './AccountTransfer';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -22,6 +23,11 @@ export class CustomerService {
   createCustomer(customer: Customer): Observable<Object>{
     console.log("customer service"+customer)
     return this.httpClient.post('http://localhost:9091/customers', customer);
+  }
+
+  accounttransaction(accountTransfer: AccountTransfer): Observable<Object>{
+    console.log("account transfer"+accountTransfer.balance+accountTransfer.fromAccount+accountTransfer.toAccount);
+    return this.httpClient.post('http://localhost:9091/sendMoney', accountTransfer);
   }
 
   getCustomerbyId(id: number): Observable<Customer>{

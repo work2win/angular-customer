@@ -1,1 +1,27 @@
-<p>account-transaction works!</p>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<div>
+<H4>Money Transaction</H4>
+<form class="container-create" (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+        <label>From Account Number</label>
+        <input type="number" class="form-control" id="fromAccount" 
+        [(ngModel)] = "accountTransfer.fromAccount" name = "fromAccount">        
+    </div>
+
+    <div class="form-group">
+        <label>To Account Number</label>
+        <input type="number" class="form-control" id="toAccount" 
+        [(ngModel)] = "accountTransfer.toAccount" name = "toAccount">        
+    </div>
+
+    <div class="form-group">
+        <label>Amount</label>
+        <input type="number" class="form-control" id="balance" 
+        [(ngModel)] = "accountTransfer.balance" name = "balance">        
+    </div>
+
+    <button class="btn btn-info" type="submit">Submit</button>
+</form>
+</div>
