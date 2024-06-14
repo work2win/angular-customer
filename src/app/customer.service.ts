@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Customer } from './customer';
+import { MoneyTransfer } from './MoneyTransfer';
 
 
 @Injectable({
@@ -11,6 +12,8 @@ import { Customer } from './customer';
 export class CustomerService {
 
  // private baseURL = "http://localhost:9091/customers";
+
+ 
  constructor(private httpClient: HttpClient) { }
   
   getCustomerList(): Observable<Customer[]>{
@@ -27,7 +30,12 @@ export class CustomerService {
 
   accounttransaction(accountTransfer: AccountTransfer): Observable<Object>{
     console.log("account transfer"+accountTransfer.balance+accountTransfer.fromAccount+accountTransfer.toAccount);
-    return this.httpClient.post('http://localhost:9091/sendMoney', accountTransfer);
+    return this.httpClient.post('http://localhost:8080/sendMoney', accountTransfer);
+  }
+
+  moneyTransfer(moneyTransfer: MoneyTransfer): Observable<MoneyTransfer[]>{
+    console.log("moneyTransfer trans type"+moneyTransfer.typetrans);
+    return this.httpClient.post<MoneyTransfer[]>("http://localhost:9091/transfer",moneyTransfer);
   }
 
   getCustomerbyId(id: number): Observable<Customer>{

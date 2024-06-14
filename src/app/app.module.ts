@@ -9,13 +9,15 @@ import { CreateCustomerComponent } from './create-customer/create-customer.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { AccountTransactionComponent } from './account-transaction/account-transaction.component';
+import { TransferComponent } from './transfer/transfer.component';
 @NgModule({
   declarations: [
     AppComponent,
     CustomerListComponent,
     CreateCustomerComponent,
     UpdateCustomerComponent,
-    AccountTransactionComponent
+    AccountTransactionComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,

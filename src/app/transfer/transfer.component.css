@@ -1,0 +1,100 @@
+
+.container {
+    background-color: rgba(64, 176, 228, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+  }
+
+.input--box { 
+  position           : relative; 
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width:100% - 4%;
+  padding           : 2%;
+  display           : block;
+  margin-bottom     : .5em;
+  border            : 0;
+  outline 			   : 0;
+  background-color  : #EEE;
+}
+
+
+input[type="submit"] {
+  display           : block;
+  border-radius     : 2px;
+  width             : 100%;
+  border            : 0;
+  background-color  : #DDD;
+  padding           : 1em 0;
+  &:hover, &:focus { background-color: lightgreen; color: green;}
+}
+
+
+input,
+textarea {
+
+	&:focus {
+	  color:white;
+	}
+	&:focus:valid {
+	  background-color   : lightgreen;
+	  outline-color      : green;
+	  color              : green;
+	}
+	&:focus:invalid {
+	  background-color   : tomato;
+	  outline-color      : red;
+	}
+
+}
+
+
+input,
+textarea {
+
+	&:required ~label,
+	&:focus:valid ~label,
+	&:focus:invalid ~label  {
+	   font-family   : sans-serif;
+	   display       : block;
+	   position      : absolute;
+	   top           : 10px;
+	   right         : 10px;
+	   font-size     : 1em;
+	   font-weight   : bold;
+	}
+
+	&:required:focus:valid  ~label::before,
+	&:focus:valid ~label::before { 
+	    content     : ':)';
+	    color       : green;
+	    font-size 	: 1.5em;
+	}
+
+	&:required ~label::before { 
+	    content     : 'Required';
+	    color       : #DDD;
+	}
+	
+	&:required:valid ~label::before {
+		color       : green*1.32;
+	}
+
+	&:required:focus ~label::before,
+	&:focus:invalid ~label::before { 
+	    content     : ':(';
+	    color         : red;
+	    font-size 	: 1.5em;
+	}
+}
+
+.content {margin: 0 auto; display:block; max-width: 800px; clear:both;}
+footer {display:block; float:left; width:100%; margin-top: 2em;}
+h1 {text-align:center; font-size: 3em; color: indigo;}
+p {text-align:center; font-size: 2em;}
+footer {text-align:center;}

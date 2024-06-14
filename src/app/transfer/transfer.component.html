@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<div class="wrapper">
+    
+<div class="container">
+<form (ngSubmit) = "onSubmit()" class="content">
+    
+     <div class="input--box">
+        <label for="fromAccount"> From Account : </label>
+        <input type="number" id="fromAccount" [(ngModel)]="moneyTransfer.fromAccount" name="fromAccount">       
+        <label for="toAccount"> To Account : </label>
+        <input type="number" id="toAccount" [(ngModel)]="moneyTransfer.toAccount" name="toAccount">
+     </div>
+     <div class="input--box">
+        <label for="typetrans">Type of Transaction: </label>
+        <input type="text"  id="typetrans"  [(ngModel)]="moneyTransfer.typetrans" name = "typetrans" />
+     </div>
+          
+     <div class="input--box">
+        <label for="amount">Amount: </label>
+        <input type="number"  id="amount"  [(ngModel)]="moneyTransfer.amount" name = "amount" />
+        <label for="date"> Date :  </label>
+        <input type="date" id="date" [(ngModel)]="moneyTransfer.date" name="date">
+     </div>
+
+     <div class="input--box">
+        <H5 style="text-align: center;color: rgb(8, 42, 136);"><button class="btn btn-info" type="submit">Submit</button></H5> 
+    </div>    
+  </form> 
+  
+</div>
+</div>
+
+<footer></footer>
