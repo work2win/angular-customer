@@ -92,9 +92,17 @@ body{
   .sub5{
       margin-top: 150px;
   }
-  .heading1,.heading2{
-    font-size: 80px;
+  .heading{
+    font-size: 26px;
     color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 1px black;
+  }
+  .heading1,.heading2{
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px 2px black;
@@ -143,6 +151,11 @@ body{
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .heading {
+      font-size: 5px;
+      
     }
     .heading2{
         font-size: 20px;
